@@ -1,6 +1,6 @@
 [project]
-name = "project_or_module_name"
-description = "A_short_description"
+name = "rpi-sensor-library"
+description = "A library for interfacing with sensors on the Raspberry Pi platform"
 
 # If a project, then you can specify version here
 # version = "0.0.0"
@@ -31,7 +31,7 @@ classifiers = [
 
 # If a module, then use fetch version from src/module_name/__init__.py
 [tool.setuptools.dynamic]
-version = {attr = "module0.__version__"}
+version = {attr = "sensor_library.__version__"}
 
 [project.optional-dependencies]
 test = [
