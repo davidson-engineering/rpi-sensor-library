@@ -11,7 +11,7 @@ class SensorDHT11:
         self.pin = pin
 
     def read(self):
-        humidity, temperature = adafruit_dht.read(self.sensor, self.pin)
+        humidity, temperature = self.sensor.read(self.sensor, self.pin)
         if humidity is not None and temperature is not None:
             logger.info(
                 "Temp={0:0.1f}C Humidity={1:0.1f}%".format(temperature, humidity)
