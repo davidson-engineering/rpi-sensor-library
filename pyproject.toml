@@ -24,9 +24,9 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
 ]
 
-# dependencies = [
-#    "Adafruit-DHT >= 1.4.0",
-# ]
+dependencies = [
+  "adafruit-circuitpython-dht",
+]
 
 # If a module, then use fetch version from src/module_name/__init__.py
 [tool.setuptools.dynamic]
