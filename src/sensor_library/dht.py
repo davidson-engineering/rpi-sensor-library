@@ -10,7 +10,7 @@ class SensorDHT11:
         self.pin = pin
         self.sensor = adafruit_dht.DHT11(pin=pin)
 
-    def measure(self):
+    def measure(self) -> dict:
         self.sensor.measure()
         humidity, temperature = self.sensor.humidity, self.sensor.temperature
         if humidity is not None and temperature is not None:
