@@ -1,14 +1,18 @@
 import logging
 import adafruit_dht
+import board
 
 logger = logging.getLogger(__name__)
 
 
 class SensorDHT11:
-    def __init__(self, pin, name: str = "DHT11"):
+    def __init__(self, pin: adafruit_dht.Pin, name: str = "DHT11"):
         self.name = name
-        self.pin = pin
-        self.sensor = adafruit_dht.DHT11(pin=pin)
+        if isinstance(pin, int):
+            pin = getattr(board, f"D{pin}")
+        elif isinstance(pin, str):
+            pin = getattr(board, pin)
+        self.sensor = adafruit_dht.DHT11(pin)
 
     def measure(self) -> dict:
         self.sensor.measure()
