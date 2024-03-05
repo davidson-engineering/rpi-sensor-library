@@ -15,7 +15,11 @@ class SensorDHT11:
         self.sensor = adafruit_dht.DHT11(pin)
 
     def measure(self) -> dict:
-        self.sensor.measure()
+        try:
+            self.sensor.measure()
+        except RuntimeError as error:
+            logger.error(f"RuntimeError reading sensor. {error} Continuing ... ")
+
         humidity, temperature = self.sensor.humidity, self.sensor.temperature
         if humidity is not None and temperature is not None:
             logger.info(
