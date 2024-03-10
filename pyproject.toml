@@ -26,7 +26,9 @@ classifiers = [
 
 dependencies = [
   "adafruit-circuitpython-dht",
-  "RPi.GPIO"
+  "RPi.GPIO",
+  "Adafruit_Blinka",
+  "adafruit-circuitpython-ahtx0"
 ]
 
 # If a module, then use fetch version from src/module_name/__init__.py
