@@ -25,11 +25,16 @@ classifiers = [
 ]
 
 dependencies = [
-  "adafruit-circuitpython-dht",
-  "RPi.GPIO",
+  "adafruit-circuitpython-ahtx0",
+  # "adafruit-circuitpython-dht",
   "Adafruit_Blinka",
-  "adafruit-circuitpython-ahtx0"
 ]
+
+# [dependency-groups]
+# AHT = ["adafruit-circuitpython-ahtx0", "Adafruit_Blinka"]
+# DHT = ["adafruit-circuitpython-dht", "Adafruit_Blinka"]
+# all = [{include="AHT"}, {include="DHT"}]
+
 
 # If a module, then use fetch version from src/module_name/__init__.py
 [tool.setuptools.dynamic]
