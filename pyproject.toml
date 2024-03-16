@@ -28,6 +28,7 @@ dependencies = [
   "adafruit-circuitpython-ahtx0",
   # "adafruit-circuitpython-dht",
   "Adafruit_Blinka",
+  "RPi.GPIO",
 ]
 
 # [dependency-groups]
